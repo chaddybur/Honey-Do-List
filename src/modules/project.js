@@ -1,4 +1,4 @@
-import eventListeners from "../modules/todolist"
+//import eventListeners from "../modules/todolist"
 
 function projectAppend(){
 
@@ -34,6 +34,8 @@ addButton.addEventListener("click", function(){
     let list = document.querySelector(".projectLists");
     list.appendChild(newProject)
     form.remove();
+
+    
 
 })
 })

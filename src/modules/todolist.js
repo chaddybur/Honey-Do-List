@@ -1,5 +1,5 @@
 
-export function eventListeners(){
+function eventListeners(){
 
     class Todo{
         constructor(name){
@@ -24,3 +24,5 @@ export function eventListeners(){
     
     }
 
+
+export default eventListeners
