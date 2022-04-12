@@ -1,0 +1,75 @@
+body{
+    background-color: #5B5F97;
+    display: float;
+    margin:0;
+    padding: 0;
+}
+
+header{
+    background-color: #B8B8D1;
+    width: 100%;
+
+}
+header img{
+    margin-left: 3rem;
+    height: 5rem;
+}
+nav{
+
+    width: 20%;
+    background-color: #FFC145;
+    padding: 1rem;
+    padding-bottom: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5B5F97;
+    border: 10px solid #5B5F97;
+    float: left;
+
+}
+h1{
+    margin-left: 1rem;
+}
+nav li{
+    list-style: none;
+    font-size: x-large;
+    margin-bottom: 2rem;
+    font-style: oblique;
+}
+.main{
+    margin-top: 1rem;
+    display: float;
+    float: left;
+    width: 75%;
+    padding-bottom: 78.05%;
+    background-color: #5B5F97;
+    margin: 0;
+    color: #FFC145;
+}
+i{
+    color: #FF6B6C;
+    text-shadow: 1px 1px black;
+    margin-right: .5rem;
+}
+.inbox:hover, .today:hover, .week:hover, .add:hover{
+    background-color: #B8B8D1;
+    
+}
+.add{
+    font-size: large;
+}
+.inbox:active{
+    background-color: #B8B8D1;
+}
+.name{
+    color: #FFC145;
+    margin: 2rem;
+}
+.taskList{
+    list-style: none;
+    color: #FFC145;
+    
+}
+.taskBar{
+    display: float;
+    float: right;
+}
