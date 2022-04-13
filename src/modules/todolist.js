@@ -1,26 +1,24 @@
-
+import TaskConstructor from "./storage"
 function eventListeners(){
 
-    class Todo{
-        constructor(name){
-            this.name = name
-            document.querySelector(".name").innerText = name
-        }
-    }
     let inbox = document.querySelector(".inbox")
     let today = document.querySelector(".today")
     let week = document.querySelector(".week")
     
     inbox.addEventListener("click", function (){
-        new Todo(inbox.innerText)
+        new TaskConstructor(inbox.innerText)
+        document.querySelector(".task").style = "display:flex;"
     })
     
     today.addEventListener("click", function (){
-        new Todo(today.innerText)
+        new TaskConstructor(today.innerText)
+        document.querySelector(".task").style = "display:none;"
     })
     week.addEventListener("click", function (){
-        new Todo(week.innerText)
+        new TaskConstructor(week.innerText)
+        document.querySelector(".task").style = "display: none;"
     })
+
     
     }
 

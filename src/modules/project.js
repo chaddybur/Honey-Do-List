@@ -1,41 +1,32 @@
-//import eventListeners from "../modules/todolist"
-
+import TaskConstructor from "./storage"
+import formCreator from "./form";
 function projectAppend(){
 
 
-let projectAdd = document.querySelector(".add");
+let projectAdd = document.querySelector(".addProject");
 
 projectAdd.addEventListener("click", function(){
-    let form = document.createElement("form");
-    let projects = document.querySelector(".projects")
-    projects.appendChild(form)
-    let input = document.createElement("input");
-    input.className = ("newInput")
-    form.appendChild(input);
-    let box = document.createElement("div");
-    box.className = "box"
-    form.appendChild(box);
-    let button = document.createElement("div");
-    button.innerText = "Add"
-    button.className = "button"
-    button.id = "addButton"
-    box.appendChild(button);
-    let cancel = document.createElement("div");
-    cancel.className = "button"
-    cancel.id = "cancelButton"
-    cancel.innerText = "Cancel"
-    box.appendChild(cancel)
-    
 
-    let addButton = document.querySelector("#addButton");
+    //Create a new form once button is clicked
+    formCreator(projectAdd)
+    
+    // Button to add new projects
+
+    let addButton = document.querySelector(".formAddButton");
 addButton.addEventListener("click", function(){
     let newProject = document.createElement("li");
-    newProject.innerText = document.querySelector(".newInput").value;
-    let list = document.querySelector(".projectLists");
+    newProject.className = "newProject"
+    newProject.innerText = document.querySelector(".formInput").value;
+    let list = document.querySelector(".projects");
     list.appendChild(newProject)
     form.remove();
 
-    
+    newProject.addEventListener("click", function (){
+        new TaskConstructor(newProject.innerText)
+        document.querySelector(".task").style = "display:flex;"
+    })
+
+
 
 })
 })
