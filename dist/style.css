@@ -53,16 +53,7 @@ i{
 .inbox:hover, .today:hover, .week:hover, .add:hover, .newProject:hover{
     background-color: #B8B8D1;  
 }
-.add{
-    font-size: large;
-}
-.inbox:active{
-    background-color: #B8B8D1;
-}
-.name{
-    color: #FFC145;
-    margin: 2rem;
-}
+
 .taskList{
     list-style: none;
     color: #FFC145;
@@ -73,64 +64,6 @@ i{
     float: left;
 }
 
-.newForm{
-    margin-top: 3rem;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
 
-}
-input{
-    background-color: #B8B8D1;
-    border-radius: 10px;
-    margin-top: .5rem;
-    height: 1.5rem;
-}
-.button{
-    display: flex;
-    flex-direction: row;
-    background-color: #5B5F97;
-    color:#FFC145;
-    width: 5rem;
-    height: 20%;
-    border-radius: 10px;  
-    font-size: large;
-    border: black 2px solid;
-    margin-top: .5rem;
-    padding: .2rem;
-    
 
-}
-.box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.newTask{
-    margin: 1rem;
-}
-#taskRow{
-    margin-top: 1rem;
-    background-color: #FFC145;
-    color: #5B5F97;
-    margin-left: 8rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    border-radius: 15px;
-}
-#taskRow li{
-    list-style: none;
-}
-
-.anotherTask{
-    font-size: large;
-    font-weight: 500;
-}
-.cancelX{
-    margin-top:.1rem;
-}
-.complete0{
-    margin-top: .1rem;
-    padding-left: -1rem;
 }

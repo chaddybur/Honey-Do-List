@@ -1,34 +1,23 @@
-import TaskConstructor from "./storage"
-import formCreator from "./form";
-function projectAppend(){
+//import { toDate, isToday, isThisWeek, subDays } from "date-fns";
 
+class Project{
 
-let projectAdd = document.querySelector(".addProject");
+    constructor(projectName){
+        this.name = projectName
+        this.task = []
+    }
+   setName(Newname){
+        this.name = Newname
+    }
+    getName(){
+        return this.name
+    }
+    setTask(task){
+        this.task.push(task)
+    }
+    getTask(){
+        return this.task
+    }
 
-projectAdd.addEventListener("click", function(){
-
-    //Create a new form once button is clicked
-    formCreator(projectAdd)
-    
-    // Button to add new projects
-
-    let addButton = document.querySelector(".formAddButton");
-addButton.addEventListener("click", function(){
-    let newProject = document.createElement("li");
-    newProject.className = "newProject"
-    newProject.innerText = document.querySelector(".formInput").value;
-    let list = document.querySelector(".projects");
-    list.appendChild(newProject)
-    form.remove();
-
-    newProject.addEventListener("click", function (){
-        new TaskConstructor(newProject.innerText)
-        document.querySelector(".task").style = "display:flex;"
-    })
-
-
-
-})
-})
 }
-export default projectAppend
+export default Project

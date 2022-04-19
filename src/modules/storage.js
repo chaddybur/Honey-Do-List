@@ -1,21 +1,15 @@
-import addTask from "./task.js"
-class TaskConstructor{
+import Project from "./project";
+import Task from "./task";
 
-    constructor(name){
-        this.name = name;
-        let newName = document.querySelector(".name");
-        newName.innerText = name;
-
-        
+export default Storage = {
+    
+   
+    setProject(project, value){
+        localStorage.setItem(project, value)
+    },
+   getProject(project){
+        localStorage.getItem(project)
     }
+    
+    
 }
-
-
-
-
-
-
-
-
-
-export default TaskConstructor;
