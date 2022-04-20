@@ -1,7 +1,7 @@
 import Project from "./project";
 import Task from "./task";
 import Storage from "./storage";
-import { add, parseJSON } from "date-fns";
+import { add, parseJSON, compareAsc,toDate, format } from "date-fns";
 
 export default function UI(){
     
@@ -45,8 +45,7 @@ taskNew.addEventListener("click", function(){
         stored.task.push(newTaskObj)
         Storage.setProject(objName, JSON.stringify(stored))
         form.remove()
-        console.log(stored.task[0].name)
-        console.log(stored.task.length)
+     
         for(let i=0; i < stored.task.length; i++){
             let box = document.createElement("div")
             let taskName = stored.task[i].name
@@ -55,8 +54,16 @@ taskNew.addEventListener("click", function(){
             let placeholder = document.querySelector(".taskList")
             placeholder.appendChild(box)
             box.appendChild(listPlace)
+            let dateHolder = stored.task[i].dueDate
+            let datePlace = document.createElement("span")
+            datePlace.className = "date"
+            datePlace.innerText = dateHolder
+            listPlace.appendChild(datePlace)
         }
-      
+      let dateBtn = document.querySelector(".date")
+      dateBtn.addEventListener("click", function(){
+          dateBtn.innerHTML =`<input type=date value= ${toDate}>`
+      })
     })
 })
      
@@ -105,8 +112,7 @@ taskNew.addEventListener("click", function(){
            let parsedObj = JSON.parse(storedObj)
            let listName = document.querySelector(".listName")
            listName.innerText = parsedObj.name
-           console.log(newListItem.innerText)
-           console.log(parsedObj)
+         
 
             for(let i=0; i < parsedObj.task; i++){
                 let taskName = parsedObj.task[i]

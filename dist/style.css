@@ -65,5 +65,8 @@ i{
 }
 
 
-
+.date{
+    display: float;
+    float: right;
+    margin-right: 1rem;
 }
