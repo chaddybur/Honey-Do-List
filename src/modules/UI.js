@@ -27,6 +27,37 @@ taskNew.addEventListener("click", function(){
         cancelBtn.className = "cancelButton"
         form.appendChild(addBtn)
         form.appendChild(cancelBtn)
+    
+    cancelBtn.addEventListener("click", function(){
+        form.remove()
+    })
+
+    addBtn.addEventListener("click", function(){
+        let newTaskName = input.value;
+        let newListTask = document.createElement("li");
+        newListTask.innerText = newTaskName;
+        let newTaskObj = new Task(newTaskName)
+        console.log(newTaskObj)
+        let objName = document.querySelector(".listName").innerText
+        console.log(objName)
+        let stored = JSON.parse(localStorage.getItem(objName))
+        console.log(stored)
+        stored.task.push(newTaskObj)
+        Storage.setProject(objName, JSON.stringify(stored))
+        form.remove()
+        console.log(stored.task[0].name)
+        console.log(stored.task.length)
+        for(let i=0; i < stored.task.length; i++){
+            let box = document.createElement("div")
+            let taskName = stored.task[i].name
+           let listPlace = document.createElement("li")
+            listPlace.innerText = taskName
+            let placeholder = document.querySelector(".taskList")
+            placeholder.appendChild(box)
+            box.appendChild(listPlace)
+        }
+      
+    })
 })
      
 
